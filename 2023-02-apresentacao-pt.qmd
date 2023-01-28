@@ -1,0 +1,74 @@
+---
+title: 'Apresentações com Quarto, RStudio e Reveal<br />'
+author: '<br /><br /><br /><br /><br />Fernando Náufel<br />Depto. de Ciências da Natureza<br />Universidade Federal Fluminense'
+format: 
+  revealjs:
+    theme: white
+    width: 1100
+    height: 675
+    css: 
+      - https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css
+      - fn-quarto.css
+    center: true
+    slide-number: c/t
+    show-slide-number: all
+    code-link: true
+    embed-resources: false  # ??? change later
+    self-contained-math: false  # ??? change later
+    preview-links: false
+    link-external-icon: true
+    link-external-newwindow: true
+    link-external-filter: '^file:\/\/'
+    center-title-slide: false
+    title-slide-attributes: 
+      data-background-image: images/rstudio-qmd-how-it-works.png
+      data-background-position: center
+      data-background-size: 100%
+---
+
+. . .
+
+Quarto: <https://quarto.org/>
+
+. . .
+
+RStudio: <https://posit.co/products/open-source/rstudio/>
+
+. . .
+
+Reveal: <https://revealjs.com/>
+
+. . .
+
+Esta apresentação: <???>
+
+. . .
+
+:::{.text-center .rotate-left .w-50 .fr}
+
+[Tudo software livre]{.hl .Large .purple .shadow-3 .pa3}
+
+:::
+
+
+---
+
+![](images/rstudio-qmd-how-it-works.png){.shadow-3 .w-90 .center}
+
+. . .
+
+[**qmd:**]{.blue} Arquivo texto em Quarto Markdown
+
+. . .
+
+[**knitr:**]{.dark-pink} Conversor para Markdown [(site)](https://yihui.org/knitr/)
+
+. . .
+
+[**md:**]{.dark-red} Arquivo texto em Markdown
+
+. . .
+
+[**pandoc:**]{.blue} Conversor para HTML [e muitos outros formatos](https://pandoc.org/diagram.svgz) [(site)](https://pandoc.org/)
+
+
