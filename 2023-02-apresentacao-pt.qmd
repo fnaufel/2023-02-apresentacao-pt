@@ -1,6 +1,4 @@
 ---
-title: 'Apresentações com Quarto, RStudio e Reveal<br />'
-author: '<br /><br /><br /><br /><br />Fernando Náufel<br />Depto. de Ciências da Natureza<br />Universidade Federal Fluminense'
 format: 
   revealjs:
     theme: white
@@ -9,7 +7,7 @@ format:
     css: 
       - https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css
       - fn-quarto.css
-    center: true
+    center: false
     slide-number: c/t
     show-slide-number: all
     code-link: true
@@ -19,12 +17,18 @@ format:
     link-external-icon: true
     link-external-newwindow: true
     link-external-filter: '^file:\/\/'
-    center-title-slide: false
-    title-slide-attributes: 
-      data-background-image: images/rstudio-qmd-how-it-works.png
-      data-background-position: center
-      data-background-size: 100%
+    auto-stretch: true
 ---
+
+![](images/rstudio-qmd-how-it-works.png){.center}
+
+::: {.tc .f-subheadline}
+
+Apresentações com Quarto, RStudio e Reveal
+
+:::
+
+## URLs
 
 . . .
 
@@ -51,9 +55,9 @@ Esta apresentação: <???>
 :::
 
 
----
+## Workflow
 
-![](images/rstudio-qmd-how-it-works.png){.shadow-3 .w-90 .center}
+![](images/rstudio-qmd-how-it-works.png){.center}
 
 . . .
 
@@ -72,3 +76,205 @@ Esta apresentação: <???>
 [**pandoc:**]{.blue} Conversor para HTML [e muitos outros formatos](https://pandoc.org/diagram.svgz) [(site)](https://pandoc.org/)
 
 
+## WYSIWYG
+
+![](images/rstudio-qmd-how-it-works.png){.center .w-70}
+
+. . .
+
+::: {.tc}
+
+$\times$
+
+:::
+
+![](images/hammer computer_thumb[2].jpg){.center .w-30}
+
+
+. . .
+
+::: {.absolute .red .rotate-left .right-2 style="bottom: 8rem;"}
+
+What You See  
+Is What You Get
+
+:::
+
+
+## HTML $\times$ Markdown {.smaller}
+
+. . .
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+
+![](./images/html-fragment.png){.w-90}
+
+::::
+
+:::: {.column width="60%"}
+
+::: {.panel-tabset}
+
+### HTML
+
+```{.html }
+<h1>Cabeçalho nível 1</h1>
+<h2>Cabeçalho nível 2</h2>
+<p>Um parágrafo, com palavras em <em>itálico</em> e em 
+<strong>negrito</strong>.</p>
+<ul>
+  <li>Primeiro item</li>
+  <li>Segundo item
+    <ul>
+      <li>Um subitem</li>
+    </ul>
+  </li>
+</ul>
+<ol>
+  <li>Item numerado</li>
+  <li>Outro item</li>
+  <li>E mais um</li>
+</ol>
+<p>Um <a href="https://en.wikipedia.org/wiki/Markdown">
+link para uma página sobre Markdown</a>.</p>
+
+<p>Uma imagem:</p>
+
+<p><img src="./images/Markdown-mark.svg.png"/></p>
+```
+
+::: {.tr}
+
+[[H]{.hl}yper[T]{.hl}ext [M]{.hl}arkup [L]{.hl}anguage]{.small}
+
+:::
+
+### Markdown
+
+```{.markdown}
+# Cabeçalho nível 1
+
+## Cabeçalho nível 2
+
+Um parágrafo, com palavras em *itálico* e em **negrito**.
+
+* Primeiro item
+* Segundo item
+  * Um subitem
+
+1. Item numerado
+1. Outro item
+1. E mais um
+
+Um [link para uma página sobre
+Markdown](https://en.wikipedia.org/wiki/Markdown).
+
+Uma imagem: 
+  
+![](./images/Markdown-mark.svg.png)
+
+```
+
+::: {.tr}
+
+[<https://en.wikipedia.org/wiki/Markdown>]{.small}
+
+:::
+
+:::
+
+::::
+
+:::::
+
+
+---
+
+## Matemática {.smaller}
+
+. . .
+
+::: {.mt6}
+
+:::
+
+::::: {.columns}
+
+:::: {.column width="53%"}
+
+```markdown
+As soluções de uma equação $ax^2 + bx + c = 0$ são
+
+$$
+x = \frac{-b \pm \sqrt{\Delta}}{2a}
+$$
+  
+onde $\Delta = b^2 - 4ac$.
+```
+
+::::
+
+:::: {.column width="7%"}
+
+::::
+
+:::: {.column width="40%"}
+
+As soluções de uma equação $ax^2 + bx + c = 0$ são
+
+$$
+x = \frac{-b \pm \sqrt{\Delta}}{2a}
+$$
+  
+onde $\Delta = b^2 - 4ac$.
+
+::::
+
+:::::
+
+. . .
+
+::: {.tr .mt4}
+
+<https://www.latex-project.org/>
+
+:::
+
+
+## Código [executável]{.hl} {.smaller}
+
+. . .
+
+```{r}
+#| echo: true
+#| output-location: fragment
+library(tidyverse)
+iris %>% 
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point()
+```
+
+
+## Linguagens
+
+. . .
+
+::: {.mt4}
+
+:::
+
+```{r}
+#| echo: true
+#| output-location: fragment
+names(knitr::knit_engines$get()) %>% sort()
+```
+
+. . .
+
+::: {.tr .mt4 .scriptsize}
+
+<https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html>
+
+:::
