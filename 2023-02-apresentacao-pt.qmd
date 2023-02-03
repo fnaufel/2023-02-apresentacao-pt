@@ -252,8 +252,7 @@ onde $\Delta = b^2 - 4ac$.
 #| output-location: fragment
 library(tidyverse)
 iris %>% 
-  ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
-  geom_point()
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) + geom_point()
 ```
 
 
@@ -278,3 +277,13 @@ names(knitr::knit_engines$get()) %>% sort()
 <https://bookdown.org/yihui/rmarkdown-cookbook/other-languages.html>
 
 :::
+
+
+## Reveal: [demo](https://quarto.org/docs/presentations/revealjs/demo/)
+
+::: {.center .w-90 .mt3 .shadow-3 style="height: 550px;"}
+
+<iframe class="center" src="https://quarto.org/docs/presentations/revealjs/demo/" style="width: 99%; height: 100%;"></iframe>
+
+:::
+
